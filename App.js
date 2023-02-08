@@ -1,12 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Posts from './components/Posts.js';
+import Post from './components/Post.js'
+import Home from './components/Home.js'
+import QRCode from './components/QRCode.js';
+import ScanCode from './components/ScanCode.js';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+          {/* <Stack.Screen name="Home" component={Home} options={{title: 'Welcome'  }}/> */}
+          <Stack.Screen name="Scan Products" component={Posts} options={{title: 'Scan Products'}}/>
+          <Stack.Screen name="Products Details" component={Post} options={{title: 'Products Details'}}/>
+          <Stack.Screen name="QR Code" component={QRCode} options={{title: 'scan code'}}/>
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 
