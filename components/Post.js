@@ -253,8 +253,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     borderWidth: 20,
     borderColor: 'rgba(0, 0, 0, 0.1)',
-    shadowOpacity: 0,
-    elevation: Platform.OS === 'ios' ? null : 0,
+
       
   },
     itemImg: {
