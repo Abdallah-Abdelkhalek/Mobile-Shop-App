@@ -14,7 +14,7 @@ export default function App() {
   return (
       <NavigationContainer>
         <Stack.Navigator>
-          {/* <Stack.Screen name="Home" component={Home} options={{title: 'Welcome'  }}/> */}
+          <Stack.Screen name="Home" component={Home} options={{title: 'Welcome'  }}/>
           <Stack.Screen name="Scan Products" component={Posts} options={{title: 'Scan Products'}}/>
           <Stack.Screen name="Products Details" component={Post} options={{title: 'Products Details'}}/>
           <Stack.Screen name="QR Code" component={QRCode} options={{title: 'scan code'}}/>

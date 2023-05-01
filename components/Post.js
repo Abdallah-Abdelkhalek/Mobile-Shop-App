@@ -229,18 +229,7 @@ const styles = StyleSheet.create({
         fontWeight:"600",
     },
     modalStyle: {
-    //   flexDirection: 'row',
-    //   justifyContent:"center",
-    //   alignItems:"center",
-    //   marginLeft: screenWidth/2 - 100,
-    //   marginTop:screenHeight/2 -100,
-    //   position:"absolute",
-    //   width: 200,
-    //   height: 200,
-    //   border: 220,
-      
-    //   borderColor: "rgba(255, 255, 255, .4)",
-    // borderRadius: 100,
+    
     flexDirection: 'row',
     justifyContent:"center",
     alignItems:"center",
@@ -253,7 +242,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     borderWidth: 20,
     borderColor: 'rgba(0, 0, 0, 0.1)',
-
+    
       
   },
     itemImg: {
