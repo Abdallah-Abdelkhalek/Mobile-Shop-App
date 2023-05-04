@@ -18,27 +18,19 @@ function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Welcome to My App!</Text>
+        <Text style={styles.headerText}>Welcome to your Online</Text>
       </View>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={GoToProduct}
-      >
+
+      <TouchableOpacity style={styles.button} onPress={GoToProduct}>
         <Text style={styles.buttonText}>Check Products</Text>
       </TouchableOpacity>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity
-          style={styles.leftButton}
-          onPress={GoToLogin}
-        >
+        <TouchableOpacity style={styles.leftButton} onPress={GoToLogin}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.rightButton}
-          onPress={GoToRegister}
-        >
+        <TouchableOpacity style={styles.rightButton} onPress={GoToRegister}>
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
       </View>
@@ -83,7 +75,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 50,
   },
   leftButton: {
-    backgroundColor: '#D3D3D3',
+    backgroundColor: '#007AFF',
     padding: 15,
     borderRadius: 10,
     flex: 0.5,

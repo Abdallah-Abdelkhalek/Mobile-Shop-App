@@ -20,30 +20,35 @@ const LoginScreen = () => {
       <View style={styles.header}>
         <Image source={require('./cool-image.png')} style={styles.logo} />
       </View>
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        placeholderTextColor="#555"
-        onChangeText={(text) => setEmail(text)}
-        value={email}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry={true}
-        placeholderTextColor="#555"
-        onChangeText={(text) => setPassword(text)}
-        value={password}
-      />
+
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.inputText}
+          placeholder="Username"
+          placeholderTextColor="#003f5c"
+          onChangeText={(text) => setUsername(text)}
+        />
+      </View>
+
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.inputText}
+          placeholder="Password"
+          placeholderTextColor="#003f5c"
+          secureTextEntry
+          onChangeText={(text) => setPassword(text)}
+        />
+      </View>
+      
       <TouchableOpacity
-        style={[styles.loginButton, { opacity: isLoading ? 0.5 : 1 }]}
+        style={[styles.loginBtn, { opacity: isLoading ? 0.5 : 1 }]}
         onPress={handleLogin}
         disabled={isLoading}
       >
         {isLoading ? (
-          <Text style={styles.buttonText}>Loading...</Text>
+          <Text style={styles.loginText}>Loading...</Text>
         ) : (
-          <Text style={styles.buttonText}>Log In</Text>
+          <Text style={styles.loginText}>Log In</Text>
         )}
       </TouchableOpacity>
     </View>
@@ -82,17 +87,41 @@ const styles = StyleSheet.create({
     width: 300,
     color: '#000',
   },
-  loginButton: {
-    backgroundColor: '#0077FF',
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 20,
+  loginBtn: {
+    width: '80%',
+    backgroundColor: '#003f5c',
+    borderRadius: 2,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 40,
+    marginBottom: 10,
   },
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  inputView: {
+    width: '80%',
+    backgroundColor: '#fff',
+    borderBottomColor: '#003f5c',
+    borderBottomWidth: 1,
+    marginBottom: 20,
+    alignItems: 'flex-start',
+  },
+  inputText: {
+    height: 50,
+    color: '#003f5c',
+    fontSize: 16,
+    paddingLeft: 0,
+    width: '100%'
+  },
+  loginText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  }
 });
 
 export default LoginScreen;
